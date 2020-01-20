@@ -7,58 +7,51 @@ import {
   Text,
   View,
   TextInput,
-  ActivityIndicator
+  ActivityIndicator,
+  StatusBar
 } from "react-native";
 
 import GloabalHeader from "../components/GlobalHeader";
 
-import FontAwesome from "react-native-vector-icons/FontAwesome";
+import AntDesign from "react-native-vector-icons/AntDesign";
 import { Item } from "native-base";
 import { ScrollView } from "react-native-gesture-handler";
 
 export default class Home extends React.Component {
   state = {
-    LocalBrand: [
+    DroneFunctions: [
       {
-        ProductName: "Daily Wear",
-
-        Maleimage: require("../../assets/images/Deadpool_Leather_Jacket.jpg"),
-        FemaleImage: require("../../assets/images/dailywear.jpeg")
+        name: "take of "
       },
       {
-        ProductName: "Formal Wear",
-
-        Maleimage: require("../../assets/images/formal.jpg"),
-        FemaleImage: require("../../assets/images/maxresdefault22.jpg")
-      },
-
-      {
-        ProductName: "Party Wear",
-
-        Maleimage: require("../../assets/images/partywear.jpg"),
-        FemaleImage: require("../../assets/images/partywearrrr.jpg")
+        name: "land  "
       },
       {
-        ProductName: "Others",
-
-        Maleimage: require("../../assets/images/leatherr.jpg"),
-        FemaleImage: require("../../assets/images/other.jpeg")
+        name: "stop "
+      },
+      {
+        name: "Emergency "
+      },
+      {
+        name: "Speed Increase  "
+      },
+      {
+        name: "Speed slow "
+      },
+      {
+        name: "Right "
+      },
+      {
+        name: "left "
       }
-      //   {
-      //     ProductName: "Waste",
-
-      //     image: require("../../assets/images/dummyimg(6).png")
-      //   }
     ],
-    data: ""
+    data: "",
+    Getname: " select operation "
   };
-  componentDidMount() {
-    //  console.log("navigation", this.props.navigation.state.params.type);
-    var data = this.props.navigation.state.params.type;
-    //  console.warn("hellrro", data);
-    this.setState({ data });
-    //alert(data);
+  Start() {
+    alert(" Drone under development");
   }
+
   render() {
     return (
       <View
@@ -68,13 +61,147 @@ export default class Home extends React.Component {
       >
         {/* <Text>ssss {this.state.data} </Text> */}
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-          <GloabalHeader
-            navigation={this.props.navigation}
-            BlueDrawerIcon={true}
-            //  backgroundColor={this.props.reduxState.theme.backgroundColor}
-            // RightCart={true}
-            headingText="SELECT Category"
-          />
+          <StatusBar hidden />
+          <View
+            style={{
+              flexDirection: "row",
+              width: "100%",
+              // borderWidth: 1,
+              borderColor: "blue",
+              height: "100%"
+            }}
+          >
+            <View
+              style={{
+                width: "40%",
+                height: "100%",
+                borderWidth: 1,
+                borderColor: "blue"
+              }}
+            >
+              <Text
+                style={{
+                  color: "black",
+                  textAlign: "center",
+                  fontSize: 18,
+                  width: "100%",
+                  backgroundColor: "#ffaf00",
+                  paddingVertical: 10
+                }}
+              >
+                {" "}
+                Functions{" "}
+              </Text>
+              {this.state.DroneFunctions.map((Item, I) => {
+                return (
+                  <TouchableOpacity
+                    style={{
+                      backgroundColor: "#94c760",
+                      paddingVertical: 10,
+                      marginVertical: 10,
+                      width: 100
+                      //   borderWidth: 1
+                    }}
+                    onPress={
+                      () => this.setState({ Getname: Item.name })
+                      // this.setState({
+                      //   Getname: [...this.state.Getname, Item.name]
+                      // })
+                      // console.warn("valuessssssss", this.state.Getname)
+                    }
+                  >
+                    <Text
+                      style={{
+                        color: "white",
+                        fontWeight: "500",
+                        textAlign: "center",
+                        fontSize: 18
+                      }}
+                    >
+                      {" "}
+                      {Item.name}{" "}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+            <View
+              style={{
+                width: "60%",
+                height: "100%",
+                //  borderWidth: 1,
+                borderColor: "blue",
+                borderColor: "green"
+              }}
+            >
+              <Text
+                style={{ color: "black", textAlign: "center", fontSize: 18 }}
+              >
+                {" "}
+                Your Selected Operations{" "}
+              </Text>
+
+              <Text
+                style={{
+                  // color: "black",
+                  textAlign: "center",
+                  fontSize: 25,
+                  borderWidth: 2,
+
+                  paddingVertical: 15,
+                  color: "red",
+                  fontWeight: "500",
+                  borderColor: "red",
+                  marginTop: 20
+                }}
+              >
+                {" "}
+                {this.state.Getname}
+              </Text>
+              {/* {this.state.Getname.map((Item, I) => {
+                return (
+                  <TouchableOpacity
+                    style={{
+                      backgroundColor: "#94c760",
+                      paddingVertical: 10,
+                      marginVertical: 10,
+                      width: 100,
+                      borderWidth: 1
+                    }}
+                    // onPress={() => this.setState({ Getname: Item.name })}
+                  >
+                    <Text
+                      style={{
+                        color: "white",
+                        fontWeight: "500",
+                        textAlign: "center",
+                        fontSize: 18
+                      }}
+                    >
+                      {" "}
+                      {It}{" "}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })} */}
+              <TouchableOpacity
+                style={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 100,
+                  height: 100,
+                  borderRadius: 100,
+                  position: "absolute",
+                  bottom: 10,
+                  backgroundColor: "#e98223",
+                  right: 5
+                }}
+                onPress={() => this.Start()}
+              >
+                <AntDesign name="play" color="white" size={55} />
+              </TouchableOpacity>
+            </View>
+          </View>
         </ScrollView>
       </View>
     );

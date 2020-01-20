@@ -81,7 +81,7 @@ const AppNavigator = createStackNavigator(
   },
 
   {
-    initialRouteName: "PreviewVideo"
+    initialRouteName: "Login"
   }
 );
 

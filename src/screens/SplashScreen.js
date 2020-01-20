@@ -14,14 +14,12 @@ export default class SplashScreen extends React.Component {
   componentDidMount() {
     AsyncStorage.getItem("isfirstTime", (error, resulr) => {
       if (error) {
-        alert("run")
-
+        alert("run");
       } else {
         if (resulr == null) {
-          AsyncStorage.setItem("isfirstTime", JSON.stringify(true), () => {
-          })
+          AsyncStorage.setItem("isfirstTime", JSON.stringify(true), () => {});
         } else {
-          this.props.navigation.navigate("Login")
+          this.props.navigation.navigate("Login");
         }
         // AsyncStorage.removeItem("isfirstTime", (err, result) => {
         //   if(err){
@@ -31,10 +29,8 @@ export default class SplashScreen extends React.Component {
 
         //   }
         // })
-
       }
-
-    })
+    });
   }
   render() {
     return (
@@ -62,7 +58,7 @@ export default class SplashScreen extends React.Component {
                 backgroundColor: "green",
                 image: (
                   <Image
-                    source={require("../../assets/images/splash1(3).jpeg")}
+                    source={require("../../assets/images/maxresdefault(2).jpg")}
                     // resizeMode="contain"
                     resizeMode="cover"
                     style={{ width: "100%", height: "100%" }}
@@ -70,10 +66,10 @@ export default class SplashScreen extends React.Component {
                 )
               },
               {
-                backgroundColor: "blue",
+                backgroundColor: "white",
                 image: (
                   <Image
-                    source={require("../../assets/images/splash1(2).jpeg")}
+                    source={require("../../assets/images/imageseeeee.jpg")}
                     resizeMode="cover"
                     // style={{ width: 150, height: 150, alignSelf: "center" }}
                     style={{ width: "100%", height: "100%" }}
@@ -82,14 +78,14 @@ export default class SplashScreen extends React.Component {
               },
 
               {
-                backgroundColor: "red",
+                backgroundColor: "white",
                 image: (
                   <Image
-                    source={require("../../assets/images/splash1(1).jpeg")}
+                    source={require("../../assets/images/8f7808_ea8cf5bfc8914e6db4f962ffffcb42ce_mv2.jpg")}
                     // resizeMode="contain"
-                    resizeMode="cover"
+                    resizeMode="stretch"
                     // style={{ width: 150, height: 150 }}
-                    style={{ width: "100%", height: "100%" }}
+                    style={{ width: 400, height: "100%" }}
                   />
                 )
               }
