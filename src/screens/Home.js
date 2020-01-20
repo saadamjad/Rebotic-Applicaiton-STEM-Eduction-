@@ -34,44 +34,44 @@ class Home extends React.Component {
         title: "Title 1",
         caption: "Caption 1",
         url:
-          "http://anokhidukan.com/wp-content/uploads/2018/08/7C01665D-C694-4285-9F84-41C97853023B.jpeg"
+          "https://images.squarespace-cdn.com/content/v1/570ebc54e32140a560e3d6d4/1550538150098-8Y8G8FDQC87S77S6NZ31/ke17ZwdGBToddI8pDm48kPmLlvCIXgndBxNq9fzeZb1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIFMLRh9LbupWL4Bv1SDYZc4lRApws2Snwk0j_RSxbNHMKMshLAGzx4R3EDFOm1kBS/drones.jpg?format=1000w"
       },
       {
         title: "Title 2",
         caption: "Caption 2",
         url:
-          "https://www.gossipmint.com/wp-content/uploads/2018/02/Women-Clothing-Brand-Pakistan-723x469.jpg"
+          "https://siteofthedrones.com/wp-content/uploads/2019/04/history-of-drones-best-drones-for-kids-8-696x465.jpg"
       },
       {
         title: "Title 3",
         caption: "Caption 3",
         url:
-          "https://pkvogue.com/wp-content/uploads/2019/01/Colors-Men-Shalwar-Kameez-Design-2019-11.jpg"
+          "http://www.lemondrone.com/wp-content/uploads/2016/01/drone_kids1.jpg"
       },
       {
         title: "Title 4",
         caption: "Caption 4",
         url:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-bQ96QtsY-FMoO0TbXQXSRLgcl_kKZlF94EeiDeSBWvn2QbOH9w&s"
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYdwyvOdxD7Zp3o_I0gxCmIyGziNbpmW8J-0EOcC_tVOzNnF8-&s"
       },
       {
         title: "Title 5",
         caption: "Caption 5",
         url:
-          "https://www.merapk.com/wp-content/uploads/2019/03/luxury-pret-272x231.jpg"
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSZfG6fqHRvE029saAAidOQyNTVNKHPUzmloTkrjs6Io1PPYXx&s"
       }
     ],
 
     LocalBrand: [
       {
-        ProductName: "Male",
+        ProductName: "Drown Preview",
 
-        image: require("../../assets/images/images(3).jpg")
+        image: require("../../assets/images/drone2.jpg")
       },
       {
-        ProductName: "Female",
+        ProductName: "Operationals",
 
-        image: require("../../assets/images/femailll.jpg")
+        image: require("../../assets/images/imageseee.jpg")
       }
     ]
   };
@@ -108,7 +108,7 @@ class Home extends React.Component {
           BlueDrawerIcon={true}
           //  backgroundColor={this.props.reduxState.theme.backgroundColor}
           // RightCart={true}
-          headingText="Make Your selection"
+          headingText="Home "
         />
 
         <Slideshow
@@ -141,7 +141,7 @@ class Home extends React.Component {
                   marginVertical: 30,
                   width: 150,
                   borderRadius: 10,
-                  paddingVertical: 10,
+                  //  paddingVertical: 10,
                   overflow: "hidden",
                   shadowColor: "#f3f3f3",
                   marginBottom: 17,
@@ -165,8 +165,8 @@ class Home extends React.Component {
                 <View style={{ height: "80%", width: "100%", borderWidth: 0 }}>
                   <Image
                     source={(source = Item.image)}
-                    style={{ width: "100%", height: "100%" }}
-                    resizeMode="contain"
+                    style={{ width: "100%", height: "110%" }}
+                    resizeMode="stretch"
                   />
                 </View>
 

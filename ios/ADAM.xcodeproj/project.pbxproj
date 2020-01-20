@@ -68,6 +68,7 @@
 		CC04F4470BC84576B791B5C0 /* libTextToSpeech.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4593F2046C8A4A2CB41BBFA7 /* libTextToSpeech.a */; };
 		B59348658AAC489BABACD42D /* libRNGeocoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5017B9EF8584053B8ED88D1 /* libRNGeocoder.a */; };
 		63B868857EFC49B7A73C69FF /* libimageCropPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EB4F111FE84660AA30CFA1 /* libimageCropPicker.a */; };
+		C2851259C6FC46ECB6BA8076 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6BCD6B028F4D9086DB3FFF /* libRCTVideo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -414,6 +415,8 @@
 		C5017B9EF8584053B8ED88D1 /* libRNGeocoder.a */ = {isa = PBXFileReference; name = "libRNGeocoder.a"; path = "libRNGeocoder.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		B69821E971A1452F9A1FB349 /* imageCropPicker.xcodeproj */ = {isa = PBXFileReference; name = "imageCropPicker.xcodeproj"; path = "../node_modules/react-native-image-crop-picker/ios/imageCropPicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		83EB4F111FE84660AA30CFA1 /* libimageCropPicker.a */ = {isa = PBXFileReference; name = "libimageCropPicker.a"; path = "libimageCropPicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		BA828FDF7EDF404F90A86E93 /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; name = "RCTVideo.xcodeproj"; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		6F6BCD6B028F4D9086DB3FFF /* libRCTVideo.a */ = {isa = PBXFileReference; name = "libRCTVideo.a"; path = "libRCTVideo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +455,7 @@
 				CC04F4470BC84576B791B5C0 /* libTextToSpeech.a in Frameworks */,
 				B59348658AAC489BABACD42D /* libRNGeocoder.a in Frameworks */,
 				63B868857EFC49B7A73C69FF /* libimageCropPicker.a in Frameworks */,
+				C2851259C6FC46ECB6BA8076 /* libRCTVideo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +658,7 @@
 				F429C7703FA844328490BA62 /* TextToSpeech.xcodeproj */,
 				CD6A8A749F5D4F5F8FA50735 /* RNGeocoder.xcodeproj */,
 				B69821E971A1452F9A1FB349 /* imageCropPicker.xcodeproj */,
+				BA828FDF7EDF404F90A86E93 /* RCTVideo.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1322,6 +1327,7 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADAM.app/ADAM";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1335,6 +1341,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-tts\ios\TextToSpeech",
 					"$(SRCROOT)\..\node_modules\react-native-geocoder\ios\RNGeocoder",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Debug;
@@ -1356,6 +1363,7 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADAM.app/ADAM";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1369,6 +1377,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-tts\ios\TextToSpeech",
 					"$(SRCROOT)\..\node_modules\react-native-geocoder\ios\RNGeocoder",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Release;
@@ -1401,6 +1410,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-tts\ios\TextToSpeech",
 					"$(SRCROOT)\..\node_modules\react-native-geocoder\ios\RNGeocoder",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Debug;
@@ -1432,6 +1442,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-tts\ios\TextToSpeech",
 					"$(SRCROOT)\..\node_modules\react-native-geocoder\ios\RNGeocoder",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Release;
@@ -1461,6 +1472,7 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1474,6 +1486,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-tts\ios\TextToSpeech",
 					"$(SRCROOT)\..\node_modules\react-native-geocoder\ios\RNGeocoder",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Debug;
@@ -1503,6 +1516,7 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1516,6 +1530,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-tts\ios\TextToSpeech",
 					"$(SRCROOT)\..\node_modules\react-native-geocoder\ios\RNGeocoder",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Release;
@@ -1544,6 +1559,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1557,6 +1573,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-tts\ios\TextToSpeech",
 					"$(SRCROOT)\..\node_modules\react-native-geocoder\ios\RNGeocoder",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Debug;
@@ -1585,6 +1602,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1598,6 +1616,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-tts\ios\TextToSpeech",
 					"$(SRCROOT)\..\node_modules\react-native-geocoder\ios\RNGeocoder",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Release;

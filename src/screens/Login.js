@@ -192,8 +192,8 @@ class Login extends React.Component {
               alignSelf: "center",
               marginTop: 50
             }}
-            onPress={() => this.signin()}
-            // onPress={() => this.props.navigation.navigate("Home")}
+            //onPress={() => this.signin()}
+            onPress={() => this.props.navigation.navigate("Home")}
           >
             <LinearGradient
               colors={["#eb2874", "#eb274b"]}

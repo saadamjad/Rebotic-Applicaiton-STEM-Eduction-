@@ -6,16 +6,17 @@ import Splash from "./SplashScreen";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import Home from "./Home";
-import SelectAttaire from "./SelectAttire";
-import PersonalizedScrubSizes from "./PersonalizedScrubSizes";
-import Measurements from "./Measurements";
-import Specialinstructions from "./Special_Instructions";
-import CheckOut from "./CheckOut";
-import MyOrder from "./Myorder";
+// import SelectAttaire from "./SelectAttire";
+// import PersonalizedScrubSizes from "./PersonalizedScrubSizes";
+// import Measurements from "./Measurements";
+// import Specialinstructions from "./Special_Instructions";
+// import CheckOut from "./CheckOut";
+// import MyOrder from "./Myorder";
 import ConfirmedOrder from "./ConfirmedOrder";
-import SelectDesign from "./SelectDesign";
+// import SelectDesign from "./SelectDesign";
 import SelectCategory from "./SelectCategory";
-import ReviewOrder from "./Review_order";
+// import ReviewOrder from "./Review_order";
+import PreviewVideo from "./VideoPreview";
 const AppNavigator = createStackNavigator(
   {
     Login: {
@@ -51,49 +52,13 @@ const AppNavigator = createStackNavigator(
         header: null
       })
     },
+    PreviewVideo: {
+      screen: PreviewVideo,
+      navigationOptions: () => ({
+        header: null
+      })
+    },
 
-    SelectAttaire: {
-      screen: SelectAttaire,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
-    SignUp: {
-      screen: SignUp,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
-    PersonalizedScrubSizes: {
-      screen: PersonalizedScrubSizes,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
-    Measurements: {
-      screen: Measurements,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
-    Specialinstructions: {
-      screen: Specialinstructions,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
-    CheckOut: {
-      screen: CheckOut,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
-    MyOrder: {
-      screen: MyOrder,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
     ConfirmedOrder: {
       screen: ConfirmedOrder,
       navigationOptions: () => ({
@@ -106,20 +71,9 @@ const AppNavigator = createStackNavigator(
         header: null
       })
     },
-    SelectDesign: {
-      screen: SelectDesign,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
+
     SelectCategory: {
       screen: SelectCategory,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
-    ReviewOrder: {
-      screen: ReviewOrder,
       navigationOptions: () => ({
         header: null
       })
@@ -127,7 +81,7 @@ const AppNavigator = createStackNavigator(
   },
 
   {
-    initialRouteName: "Splash"
+    initialRouteName: "PreviewVideo"
   }
 );
 
