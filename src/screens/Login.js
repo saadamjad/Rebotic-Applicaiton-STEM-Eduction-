@@ -77,7 +77,7 @@ class Login extends React.Component {
             }}
           >
             <Image
-              source={require("../../assets/images/LogoSeedo.jpeg")}
+              source={require("../../assets/images/71YD5dvU-mL._AC_SL1500_.jpg")}
               style={{ width: "100%", height: "100%" }}
               resizeMode="contain"
             />

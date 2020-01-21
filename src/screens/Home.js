@@ -17,6 +17,7 @@ import * as reduxActions from "../redux/actions/actions";
 
 import { connect } from "react-redux";
 import Slideshow from "react-native-image-slider-show";
+import { ScrollView } from "react-native-gesture-handler";
 
 class Home extends React.Component {
   state = {
@@ -110,122 +111,123 @@ class Home extends React.Component {
           // RightCart={true}
           headingText="Home "
         />
+        <ScrollView style={{ flexGrow: 1 }}>
+          <Slideshow
+            dataSource={this.state.dataSource}
+            position={this.state.position}
+            onPositionChanged={position => this.setState({ position })}
+          />
 
-        <Slideshow
-          dataSource={this.state.dataSource}
-          position={this.state.position}
-          onPositionChanged={position => this.setState({ position })}
-        />
-        {/* </View> */}
-
-        <View
-          style={{
-            flexDirection: "row",
-            width: "100%",
-            justifyContent: "space-around",
-            marginVertical: 20,
-            flexWrap: "wrap",
-            backgroundColor: "white"
-          }}
-        >
-          <TouchableOpacity
+          <View
             style={{
-              elevation: 0,
-              // height: 100,
-              alignSelf: "center",
+              flexDirection: "row",
+              width: "100%",
+              justifyContent: "space-around",
+              marginVertical: 20,
+              flexWrap: "wrap",
               backgroundColor: "white",
-              alignItems: "center",
-              justifyContent: "center",
-              marginVertical: 30,
-              width: 150,
-              borderRadius: 10,
-              //  paddingVertical: 10,
-              overflow: "hidden",
-              shadowColor: "#f3f3f3",
-              marginBottom: 17,
-              height: 170,
-
-              shadowOffset: {
-                width: 0,
-                height: 4
-              },
-              shadowOpacity: 0.52,
-              shadowRadius: 20,
-
-              elevation: 4
+              alignItems: "center"
             }}
-            onPress={() => this.props.navigation.navigate("PreviewVideo")}
           >
-            <View style={{ height: "80%", width: "100%", borderWidth: 0 }}>
-              <Image
-                source={require("../../assets/images/drone2.jpg")}
-                style={{ width: "100%", height: "110%" }}
-                resizeMode="stretch"
-              />
-            </View>
-
-            <Text
+            <TouchableOpacity
               style={{
-                borderBottomWidth: 1,
-                paddingVertical: 5,
-                height: "20%",
-                borderColor: "red",
-                color: "#eb768d"
+                elevation: 0,
+                // height: 100,
+                alignSelf: "center",
+                backgroundColor: "white",
+                alignItems: "center",
+                justifyContent: "center",
+                marginVertical: 30,
+                width: 150,
+                borderRadius: 10,
+                //  paddingVertical: 10,
+                overflow: "hidden",
+                shadowColor: "#f3f3f3",
+                marginBottom: 17,
+                height: 170,
+
+                shadowOffset: {
+                  width: 0,
+                  height: 4
+                },
+                shadowOpacity: 0.52,
+                shadowRadius: 20,
+
+                elevation: 4
               }}
+              onPress={() => this.props.navigation.navigate("PreviewVideo")}
             >
-              Product Demo
-            </Text>
-          </TouchableOpacity>
+              <View style={{ height: "80%", width: "100%", borderWidth: 0 }}>
+                <Image
+                  source={require("../../assets/images/drone2.jpg")}
+                  style={{ width: "100%", height: "110%" }}
+                  resizeMode="stretch"
+                />
+              </View>
 
-          <TouchableOpacity
-            style={{
-              elevation: 0,
-              // height: 100,
-              alignSelf: "center",
-              backgroundColor: "white",
-              alignItems: "center",
-              justifyContent: "center",
-              marginVertical: 30,
-              width: 150,
-              borderRadius: 10,
-              //  paddingVertical: 10,
-              overflow: "hidden",
-              shadowColor: "#f3f3f3",
-              marginBottom: 17,
-              height: 170,
+              <Text
+                style={{
+                  borderBottomWidth: 1,
+                  paddingVertical: 5,
+                  height: "20%",
+                  borderColor: "red",
+                  color: "#eb768d"
+                }}
+              >
+                Product Demo
+              </Text>
+            </TouchableOpacity>
 
-              shadowOffset: {
-                width: 0,
-                height: 4
-              },
-              shadowOpacity: 0.52,
-              shadowRadius: 20,
-
-              elevation: 4
-            }}
-            onPress={() => this.props.navigation.navigate("SelectCategory")}
-          >
-            <View style={{ height: "80%", width: "100%", borderWidth: 0 }}>
-              <Image
-                source={require("../../assets/images/imageseee.jpg")}
-                style={{ width: "100%", height: "110%" }}
-                resizeMode="stretch"
-              />
-            </View>
-
-            <Text
+            <TouchableOpacity
               style={{
-                borderBottomWidth: 1,
-                paddingVertical: 5,
-                height: "20%",
-                borderColor: "red",
-                color: "#eb768d"
+                elevation: 0,
+                // height: 100,
+                alignSelf: "center",
+                backgroundColor: "white",
+                alignItems: "center",
+                justifyContent: "center",
+                marginVertical: 30,
+                width: 150,
+                borderRadius: 10,
+                //  paddingVertical: 10,
+                overflow: "hidden",
+                shadowColor: "#f3f3f3",
+                marginBottom: 17,
+                height: 170,
+
+                shadowOffset: {
+                  width: 0,
+                  height: 4
+                },
+                shadowOpacity: 0.52,
+                shadowRadius: 20,
+
+                elevation: 4
               }}
+              onPress={() => this.props.navigation.navigate("SelectCategory")}
             >
-              Operationals
-            </Text>
-          </TouchableOpacity>
-        </View>
+              <View style={{ height: "80%", width: "100%", borderWidth: 0 }}>
+                <Image
+                  source={require("../../assets/images/imageseee.jpg")}
+                  style={{ width: "100%", height: "110%" }}
+                  resizeMode="stretch"
+                />
+              </View>
+
+              <Text
+                style={{
+                  borderBottomWidth: 1,
+                  paddingVertical: 5,
+                  height: "20%",
+                  borderColor: "red",
+                  color: "#eb768d"
+                }}
+              >
+                Operationals
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
       </View>
     );
   }

@@ -111,7 +111,7 @@ class DrawerView extends React.Component {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={styles.ContentView}
           onPress={() => {
             this.props.hideDrawer();
@@ -134,8 +134,8 @@ class DrawerView extends React.Component {
               Track Order
             </Text>
           </View>
-        </TouchableOpacity>
-
+        </TouchableOpacity> */}
+        {/* 
         <TouchableOpacity
           style={styles.ContentView}
           onPress={() => {
@@ -164,7 +164,7 @@ class DrawerView extends React.Component {
               Measurements
             </Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <View
           style={{
